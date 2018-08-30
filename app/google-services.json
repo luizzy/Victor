@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "472312091477",
+    "firebase_url": "https://bull-s-eye-prediction.firebaseio.com",
+    "project_id": "bull-s-eye-prediction",
+    "storage_bucket": "bull-s-eye-prediction.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472312091477:android:01b44a4e1b69b2fd",
+        "android_client_info": {
+          "package_name": "com.montylee.victor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472312091477-j9ketb72rk70fqcrk1c44hbafb6c1odb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.montylee.victor",
+            "certificate_hash": "c99df359397712100f82c3fa2267e884ef4de86f"
+          }
+        },
+        {
+          "client_id": "472312091477-draoe45enjn4jjusig6e37fs5eabik2f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8tgscuslg4GFv3lNlcsuJGFooXrymzag"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472312091477-draoe45enjn4jjusig6e37fs5eabik2f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
