@@ -23,7 +23,7 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.firebase.messaging.FirebaseMessaging;
-import com.montylee.victor.DailyTopTips;
+
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,7 +35,7 @@ public class Home extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
@@ -43,13 +43,13 @@ public class Home extends AppCompatActivity
         mInterstitialAd = createNewIntAd();
         loadIntAdd();
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView =  findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         displayView(R.id.nav_view);
@@ -71,7 +71,7 @@ public class Home extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -131,8 +131,8 @@ public class Home extends AppCompatActivity
 
             // When linking text, force to always use default color. This works
             // around a pressed color state bug.
-            TextView textView = (TextView) messageView.findViewById(R.id.about_credits);
-            TextView textView1 = (TextView) messageView.findViewById(R.id.about_description);
+            TextView textView =  messageView.findViewById(R.id.about_credits);
+            TextView textView1 = messageView.findViewById(R.id.about_description);
             int defaultColor = textView.getResources().getColor(R.color.colorBlack);
             int defaultColor1 = textView1.getResources().getColor(R.color.colorBlack);
             //int defaultColor = textView.getTextColors().getDefaultColor();
@@ -163,7 +163,7 @@ public class Home extends AppCompatActivity
             Intent sharingIntent = new Intent(Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
             String shareBody = "Win Big with the best Sports predictions app on playstore . Download here https://play.google.com/store/apps/details?id=com.montylee.victor";
-            sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Best Sports and Football Predictions App on Play Store");
+            sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Best Sports Predictions App on Play Store");
             sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
             startActivity(sharingIntent);
         }
@@ -177,7 +177,7 @@ public class Home extends AppCompatActivity
         int id = item.getItemId();
         displayView(id);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -194,14 +194,14 @@ public class Home extends AppCompatActivity
                 break;
             case R.id.nav_megajackpot:
                 fragment = new com.montylee.victor.MegaJackpotTips();
-                title = "Expert Tips";
+                title = "Combo Tips";
                 break;
             case R.id.nav_midweekjackpot:
                 fragment = new com.montylee.victor.MidweekJackpot();
-                title = "Combo Tips";
+                title = "Expert Tips";
                 break;
             case R.id.nav_telegram:
-                fragment = new com.montylee.victor.MidweekJackpot();
+                fragment = new com.montylee.victor.Telegram_Websites();
                 title = "Telegram Channel";
                 break;
 
@@ -221,7 +221,7 @@ public class Home extends AppCompatActivity
             getSupportActionBar().setTitle(title);
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
 
     }

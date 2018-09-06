@@ -14,10 +14,10 @@
             <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_megajackpot"
-            android:title="Expert Tips" />
+            android:title="Combo Tips" />
         <item
             android:id="@+id/nav_midweekjackpot"
-            android:title="Combo Tips" />
+            android:title="Expert Tips" />
         </group>
 
 

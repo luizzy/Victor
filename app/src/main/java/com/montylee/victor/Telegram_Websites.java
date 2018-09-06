@@ -48,16 +48,16 @@ public class Telegram_Websites extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.telegram_websites, container, false);
-        progressBar = (ProgressBar) v.findViewById(R.id.progressBar2);
+        progressBar = v.findViewById(R.id.progressBar2);
         progressBar.setMax(100);
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.telegram_websites, container, false);
 
-        refresher = (SwipeRefreshLayout) v.findViewById(R.id.refresher);
+        refresher =  v.findViewById(R.id.refresher);
         refresher.setColorSchemeResources(R.color.blue, R.color.lightBlue, R.color.deepPurple, R.color.purple, R.color.pink, R.color.orange, R.color.red);
 
 
-        webView = (WebView) v.findViewById(R.id.webView);
+        webView =  v.findViewById(R.id.webView);
         webView.setWebViewClient(new WebViewClientDemo());
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setBuiltInZoomControls(true);
@@ -67,7 +67,7 @@ public class Telegram_Websites extends Fragment {
                 (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
         if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            webView.loadUrl("https://t.me/OctopusBettingTips");
+            webView.loadUrl("https://t.me/VictorPredictz");
 
         } else {
             Toast.makeText(getActivity(), "Network problem, please reload the page", Toast.LENGTH_SHORT).show();
@@ -79,7 +79,7 @@ public class Telegram_Websites extends Fragment {
                         (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo netInfo = cm.getActiveNetworkInfo();
                 if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-                    webView.loadUrl("https://t.me/OctopusBettingTips");
+                    webView.loadUrl("https://t.me/VictorPredictz");
 
 
                 } else {

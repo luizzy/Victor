@@ -49,6 +49,50 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472312091477:android:70663a8248d0bf00",
+        "android_client_info": {
+          "package_name": "com.montylee.victoradmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472312091477-m50810q1envbnte69j69ahact019q9de.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.montylee.victoradmin",
+            "certificate_hash": "c99df359397712100f82c3fa2267e884ef4de86f"
+          }
+        },
+        {
+          "client_id": "472312091477-draoe45enjn4jjusig6e37fs5eabik2f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8tgscuslg4GFv3lNlcsuJGFooXrymzag"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472312091477-draoe45enjn4jjusig6e37fs5eabik2f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"

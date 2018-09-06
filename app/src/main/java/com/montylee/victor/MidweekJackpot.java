@@ -39,11 +39,11 @@ public class MidweekJackpot extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_tips, container, false);
 
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        mRecyclerView =  view.findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("victor").child("Expert Tips");
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("victor").child("expert tips");
 
-        txtLoading = (TextView) view.findViewById(R.id.jp);
+        txtLoading =  view.findViewById(R.id.jp);
 
 
         mLayoutManager = new LinearLayoutManager(getContext());
@@ -98,7 +98,7 @@ public class MidweekJackpot extends Fragment {
 
                         Intent adDetails = new Intent(v.getContext(), Post_Details.class);
                         adDetails.putExtra("postKey", item_key);
-                        adDetails.putExtra("selection","Expert Tips");
+                        adDetails.putExtra("selection","expert tips");
                         startActivity(adDetails);
                     }
                 });

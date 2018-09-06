@@ -288,8 +288,8 @@ public class Post_Details extends AppCompatActivity {
         } else if (id == R.id.menu_share) {
             Intent sharingIntent = new Intent(Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
-            String shareBody = "Win Big with the best jackpot and football predictions app on playstore . Download here https://play.google.com/store/apps/details?id=com.montylee.victor";
-            sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Best Jackpot and Football Predictions App on Play Store");
+            String shareBody = "Win Big with the best sports predictions app on playstore . Download here https://play.google.com/store/apps/details?id=com.montylee.victor";
+            sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Best sports Predictions App on Play Store");
             sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
             startActivity(sharingIntent);
         }
