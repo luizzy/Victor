@@ -65,7 +65,7 @@ public class Post_Details extends AppCompatActivity {
         autoLinkTextView.setCustomRegex("\\sHere\\b");
 
 
-        autoLinkTextView.setAutoLinkText("Motivate us to continue giving you free winning tips by rating us five stars : Here");
+        autoLinkTextView.setAutoLinkText("For more free winning tips by rate us five stars : Here");
 
         autoLinkTextView.setAutoLinkOnClickListener(new AutoLinkOnClickListener() {
             @Override
