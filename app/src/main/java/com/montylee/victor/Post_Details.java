@@ -23,6 +23,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.luseen.autolinklibrary.AutoLinkMode;
 import com.luseen.autolinklibrary.AutoLinkOnClickListener;
@@ -65,7 +66,7 @@ public class Post_Details extends AppCompatActivity {
         autoLinkTextView.setCustomRegex("\\sHere\\b");
 
 
-        autoLinkTextView.setAutoLinkText("For more free winning tips by rate us five stars : Here");
+        autoLinkTextView.setAutoLinkText("For more free winning tips, rate us five stars : Here");
 
         autoLinkTextView.setAutoLinkOnClickListener(new AutoLinkOnClickListener() {
             @Override
@@ -74,6 +75,27 @@ public class Post_Details extends AppCompatActivity {
                     try {
                         Intent RateIntent =
                                 new Intent("android.intent.action.VIEW", Uri.parse("https://play.google.com/store/apps/details?id=com.montylee.victor"));
+                        startActivity(RateIntent);
+                    }catch (Exception e){
+                        Toast.makeText(getApplicationContext(),"Unable to connect try again later...",
+                                Toast.LENGTH_SHORT).show();
+                        e.printStackTrace();
+                    }
+
+            }
+        });
+        autoLinkTextView = (AutoLinkTextView)findViewById(R.id.autoLinkjoin);
+        autoLinkTextView.addAutoLinkMode(AutoLinkMode.MODE_CUSTOM);
+        autoLinkTextView.setCustomRegex("\\sHere\\b");
+        autoLinkTextView.setAutoLinkText("Join the Telegram channel  : Here");
+
+        autoLinkTextView.setAutoLinkOnClickListener(new AutoLinkOnClickListener() {
+            @Override
+            public void onAutoLinkTextClick(AutoLinkMode autoLinkMode, String matchedText) {
+                if (autoLinkMode == AutoLinkMode.MODE_CUSTOM)
+                    try {
+                        Intent RateIntent =
+                                new Intent("android.intent.action.VIEW", Uri.parse("https://t.me/victorpredictz"));
                         startActivity(RateIntent);
                     }catch (Exception e){
                         Toast.makeText(getApplicationContext(),"Unable to connect try again later...",

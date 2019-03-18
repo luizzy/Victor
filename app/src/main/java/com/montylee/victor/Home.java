@@ -200,6 +200,10 @@ public class Home extends AppCompatActivity
                 fragment = new com.montylee.victor.MidweekJackpot();
                 title = "Expert Tips";
                 break;
+            case R.id.nav_vipjoin:
+                fragment = new com.montylee.victor.vipjoin();
+                title = "Join VIP";
+                break;
             case R.id.nav_telegram:
                 fragment = new com.montylee.victor.Telegram_Websites();
                 title = "Telegram Channel";

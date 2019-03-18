@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
 
-public class MegaJackpotTips extends Fragment {
+public class vipjoin extends Fragment {
 
 
     View view;
@@ -42,7 +42,7 @@ public class MegaJackpotTips extends Fragment {
 
         mRecyclerView =  view.findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("victor").child("combo tips");
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("victor").child("vipjoin");
 
 
         txtLoading =  view.findViewById(R.id.jp);
@@ -101,7 +101,7 @@ public class MegaJackpotTips extends Fragment {
 
 
                         Intent adDetails = new Intent(v.getContext(), Post_Details.class);
-                        adDetails.putExtra("selection","combo tips");
+                        adDetails.putExtra("selection","vipjoin");
                         adDetails.putExtra("postKey", item_key);
                         startActivity(adDetails);
                     }

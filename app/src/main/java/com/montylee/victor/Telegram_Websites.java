@@ -30,6 +30,7 @@ import android.widget.Toast;
 /**
  * A simple {@link Fragment} subclass.
  */
+
 public class Telegram_Websites extends Fragment {
     String title;
     WebView webView;
@@ -123,7 +124,7 @@ public class Telegram_Websites extends Fragment {
             return false;
         }
     }
-
+//https://victorpredictz.blogspot.com/2018/11/victor-predictz.html
     private class WebViewClientDemo extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {

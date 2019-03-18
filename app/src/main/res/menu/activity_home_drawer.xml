@@ -9,26 +9,25 @@
             android:title="Top Picks" />
     </group>
 
-
-
-            <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_megajackpot"
-            android:title="Combo Tips" />
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_midweekjackpot"
             android:title="Expert Tips" />
-        </group>
+        <item
+            android:id="@+id/nav_megajackpot"
+            android:title="Combo Tips" />
+
+    </group>
 
 
-
-
-
-            <group android:checkableBehavior="single">
-            <item
-                android:id="@+id/nav_telegram"
-                android:title="Telegram Channel" />
-            </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_vipjoin"
+            android:title="Join VIP" />
+        <item
+            android:id="@+id/nav_telegram"
+            android:title="Telegram Channel" />
+     </group>
 
 
 
